@@ -25,7 +25,7 @@
 
   hardware.graphics = {
     enable = true;
-    enable32bit = true;
+    enable32Bit = true;
   };
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
