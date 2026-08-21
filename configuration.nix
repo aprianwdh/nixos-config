@@ -22,11 +22,23 @@
   };
   # Set your time zone.
   time.timeZone = "Asia/Jakarta";
-
+  
+  #settings untuk graphics
   hardware.graphics = {
     enable = true;
     enable32Bit = true;
   };
+
+  #untuk mengaktifkan pipewire
+  security.rtkit.enable = true;
+  services.pipewire = {
+    enable = true;
+    alsa.enable = true;
+    alsa.support32Bit = true;
+    pulse.enable = true; # Ini membuat aplikasi lama mengira kamu masih pakai PulseAudio
+  };
+  hardware.pulseaudio.enable = false;
+
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
 
@@ -81,6 +93,20 @@
     ripgrep
     fd
     vscodium
+    pavucontrol
+    #untuk nvim
+    unzip
+    nodejs_22
+    python 3
+    cargo
+    sqlite
+    #integrasi pencarian
+    lazygit
+    fzf
+    #utuk screnshoot
+    grim
+    slurp
+    swappy
   ];
 
   programs.hyprland = {
@@ -89,6 +115,13 @@
     package = inputs.hyprland.packages.${pkgs.system}.hyprland;
     portalPackage = inputs.hyprland.packages.${pkgs.system}.xdg-desktop-portal-hyprland;
   };
+
+  #mengizinkan menjalankan program untuk Mason
+  programs.nix-ld.enable = true;
+  programs.nix-ld.libraries = with pkgs; [
+    stdenv.cc.cc.lib
+    zlib
+  ];
 
   nix.settings = {
     experimental-features = ["nix-command"  "flakes"];
