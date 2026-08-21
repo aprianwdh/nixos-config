@@ -37,7 +37,7 @@
     alsa.support32Bit = true;
     pulse.enable = true; # Ini membuat aplikasi lama mengira kamu masih pakai PulseAudio
   };
-  hardware.pulseaudio.enable = false;
+  services.pulseaudio.enable = false;
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
@@ -97,7 +97,7 @@
     #untuk nvim
     unzip
     nodejs_22
-    python 3
+    python3
     cargo
     sqlite
     #integrasi pencarian
