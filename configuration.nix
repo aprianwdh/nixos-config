@@ -63,6 +63,7 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users."enzwich" = {
     isNormalUser = true;
+    shell = pkgs.zsh;
     description = "Mr_Enzwich";
     extraGroups = [ "networkmanager" "wheel" "video" ];
     packages = with pkgs; [];
