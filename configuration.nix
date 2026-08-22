@@ -69,12 +69,7 @@
   };
 
   #shell zsh
-  programs.zsh = {
-    enable = true;
-    enableCompleltion = true;
-    autosuggestion.enable = true;
-    syntaxHighlighting.enable = true;
-  };
+  programs.zsh.enable = true;
 
   #starship
   programs.starship.enable = true;
