@@ -24,4 +24,38 @@ in
       recursive = true;
     })
     configs;
+
+  # Tema catpucin
+  home.pointerCursor = {
+      gtk.enable = true;
+      x11.enable = true;
+      name = "catppuccin-mocha-mauve-cursors";
+      package = pkgs.catppuccin-cursors.mochaMauve;
+      size = 24;
+    };
+
+  # Mengatur Tema Aplikasi GTK (termasuk Thunar) dan Ikon
+  gtk = {
+    enable = true;
+    theme = {
+      name = "catppuccin-mocha-mauve-standard+default";
+      package = pkgs.catppuccin-gtk.override {
+        accents = [ "mauve" ];
+        size = "standard";
+        tweaks = [ "normal" ];
+        variant = "mocha";
+      };
+    };
+    iconTheme = {
+      name = "Papirus-Dark";
+      package = pkgs.catppuccin-papirus-folders.override {
+        flavor = "mocha";
+        accent = "mauve";
+      };
+    };
+    cursorTheme = {
+      name = "catppuccin-mocha-mauve-cursors";
+      package = pkgs.catppuccin-cursors.mochaMauve;
+    };
+  };
 }
