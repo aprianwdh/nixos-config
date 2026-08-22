@@ -14,7 +14,7 @@
   # 2. TAMBAHKAN INI: Masukkan 'home-manager' ke dalam daftar argumen outputs
   outputs = inputs @ { self, nixpkgs, hyprland, home-manager, ... }: {
     nixosConfigurations.nixos-btw = nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
+      # system = "x86_64-linux";
       specialArgs = { inherit inputs; };
       modules = [
         ./configuration.nix
