@@ -6,7 +6,6 @@ let
 
   # Daftar folder yang mau di-symlink ke ~/.config/
   configs = {
-    hypr = "hypr";
     waybar = "waybar";
     rofi = "rofi";
   };

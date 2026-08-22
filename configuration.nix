@@ -64,7 +64,7 @@
   users.users."enzwich" = {
     isNormalUser = true;
     description = "Mr_Enzwich";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "video" ];
     packages = with pkgs; [];
   };
 
@@ -86,7 +86,6 @@
     nitch
     thunar
     rofi
-    swaybg
     adwaita-icon-theme
     fastfetch
     gnumake
@@ -95,6 +94,7 @@
     vscodium
     pavucontrol
     waybar
+    hyprpaper
     #untuk nvim
     unzip
     nodejs_22
@@ -108,6 +108,8 @@
     grim
     slurp
     swappy
+    wpctl
+    brightnessctl
   ];
 
   programs.hyprland = {
