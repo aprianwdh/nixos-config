@@ -1,4 +1,4 @@
-description = "Nix Configuration";
+description = "nixos-btw";
 
 inputs = {
   nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
