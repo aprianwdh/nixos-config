@@ -10,6 +10,7 @@ let
     rofi = "rofi";
     foot = "foot";
     hypr = "hypr";
+    "starship.toml" = "starship.toml"
   };
 in
 {
@@ -58,4 +59,5 @@ in
       package = pkgs.catppuccin-cursors.mochaMauve;
     };
   };
+  home.file.".zshrc".source = create_symlink "${dotfiles}/.zshrc";
 }
