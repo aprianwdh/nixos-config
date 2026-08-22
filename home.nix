@@ -40,11 +40,9 @@ in
   gtk = {
     enable = true;
     theme = {
-      name = "catppuccin-mocha-mauve-standard+default";
+      name = "Catppuccin-Mocha-Standard-Mauve-Dark";
       package = pkgs.catppuccin-gtk.override {
         accents = [ "mauve" ];
-        size = "standard";
-        tweaks = [ "normal" ];
         variant = "mocha";
       };
     };
