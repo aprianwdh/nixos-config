@@ -68,11 +68,24 @@
     packages = with pkgs; [];
   };
 
+  #shell zsh
+  programs.zsh = {
+    enable = true;
+    enableCompleltion = true;
+    autosuggestion.enable = true;
+    syntaxHighlighting.enable = true;
+  };
+
+  #starship
+  programs.starship.enable = true;
+
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  # List packages installed in system:
+  #browser firefox
   programs.firefox.enable = true;
+
+  # List packages installed in system:
   environment.systemPackages = with pkgs; [
     neovim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     tree
@@ -95,6 +108,7 @@
     pavucontrol
     waybar
     hyprpaper
+    btop
     #untuk nvim
     unzip
     nodejs_22
@@ -108,7 +122,7 @@
     grim
     slurp
     swappy
-    wpctl
+    wireplumber
     brightnessctl
   ];
 

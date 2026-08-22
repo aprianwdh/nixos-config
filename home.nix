@@ -8,6 +8,8 @@ let
   configs = {
     waybar = "waybar";
     rofi = "rofi";
+    foot = "foot";
+    hypr = "hypr";
   };
 in
 {
