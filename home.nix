@@ -10,7 +10,7 @@ let
     rofi = "rofi";
     foot = "foot";
     hypr = "hypr";
-    "starship.toml" = "starship.toml"
+    "starship.toml" = "starship.toml";
   };
 in
 {
@@ -28,12 +28,13 @@ in
 
   # Tema catpucin
   home.pointerCursor = {
-      gtk.enable = true;
-      x11.enable = true;
-      name = "catppuccin-mocha-mauve-cursors";
-      package = pkgs.catppuccin-cursors.mochaMauve;
-      size = 24;
-    };
+    enable = true;
+    gtk.enable = true;
+    x11.enable = true;
+    name = "catppuccin-mocha-mauve-cursors";
+    package = pkgs.catppuccin-cursors.mochaMauve;
+    size = 24;
+  };
 
   # Mengatur Tema Aplikasi GTK (termasuk Thunar) dan Ikon
   gtk = {

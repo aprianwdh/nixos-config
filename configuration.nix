@@ -93,7 +93,6 @@
     alejandra
     wget
     nitch
-    thunar
     rofi
     adwaita-icon-theme
     fastfetch
@@ -122,11 +121,17 @@
     brightnessctl
   ];
 
+  #menjalankan thunar dan dconf
+  programs.thunar.enable = true;
+  programs.xfconf.enable = true;
+  programs.dconf.enable = true;
+
+  #menjalankan Hyprland
   programs.hyprland = {
     enable = true;
     xwayland.enable = true;
-    package = inputs.hyprland.packages.${pkgs.system}.hyprland;
-    portalPackage = inputs.hyprland.packages.${pkgs.system}.xdg-desktop-portal-hyprland;
+    package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
+    portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
     withUWSM = true;
   };
 
