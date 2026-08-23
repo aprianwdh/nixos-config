@@ -1,10 +1,16 @@
-{ config, lib, pkgs, inputs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  inputs,
+  ...
+}:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-    ];
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+  ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -22,7 +28,7 @@
   };
   # Set your time zone.
   time.timeZone = "Asia/Jakarta";
-  
+
   #settings untuk graphics
   hardware.graphics = {
     enable = true;
@@ -65,8 +71,12 @@
     isNormalUser = true;
     shell = pkgs.zsh;
     description = "Mr_Enzwich";
-    extraGroups = [ "networkmanager" "wheel" "video" ];
-    packages = with pkgs; [];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+      "video"
+    ];
+    packages = with pkgs; [ ];
   };
 
   #shell zsh
@@ -107,7 +117,7 @@
     btop
     waypaper
     nwg-displays
-    nixfmt-rfc-style
+    nixfmt
     #untuk nvim
     unzip
     nodejs_22
@@ -135,7 +145,8 @@
     enable = true;
     xwayland.enable = true;
     package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
-    portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
+    portalPackage =
+      inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
     withUWSM = true;
   };
 
@@ -147,11 +158,19 @@
   ];
 
   nix.settings = {
-    experimental-features = ["nix-command"  "flakes"];
+    experimental-features = [
+      "nix-command"
+      "flakes"
+    ];
     download-buffer-size = 268435456;
-    trusted-users = ["root" "enzwich"];
-    extra-substituters = ["https://hyprland.cachix.org"];
-    extra-trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
+    trusted-users = [
+      "root"
+      "enzwich"
+    ];
+    extra-substituters = [ "https://hyprland.cachix.org" ];
+    extra-trusted-public-keys = [
+      "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="
+    ];
     auto-optimise-store = true;
   };
 

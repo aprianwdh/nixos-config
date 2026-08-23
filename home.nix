@@ -16,12 +16,10 @@ in
   home.homeDirectory = "/home/enzwich";
   home.stateVersion = "26.05";
 
-  xdg.configFile = builtins.mapAttrs
-    (name: subpath: {
-      source = create_symlink "${dotfiles}/${subpath}";
-      recursive = true;
-    })
-    configs;
+  xdg.configFile = builtins.mapAttrs (name: subpath: {
+    source = create_symlink "${dotfiles}/${subpath}";
+    recursive = true;
+  }) configs;
 
   home.pointerCursor = {
     enable = true;
@@ -69,12 +67,12 @@ in
   # VSCODIUM
   programs.vscodium = {
     enable = true;
-    
+
     profiles.default = {
       extensions = with pkgs.vscode-extensions; [
         # --- TEMA ---
         catppuccin.catppuccin-vsc
-        
+
         # --- NIXOS ---
         jnoortheen.nix-ide
 
@@ -82,7 +80,7 @@ in
         ms-python.python
         ms-pyright.pyright
         ms-python.black-formatter
-        
+
         # --- JAVASCRIPT & WEB ---
         esbenp.prettier-vscode
         dbaeumer.vscode-eslint
@@ -94,20 +92,20 @@ in
       ];
 
       userSettings = {
-        "workbench.colorTheme" = "Catppuccin Mocha"; 
-        "catppuccin.accentColor" = "mauve"; 
-        
+        "workbench.colorTheme" = "Catppuccin Mocha";
+        "catppuccin.accentColor" = "mauve";
+
         # Auto-format saat file disave
         "editor.formatOnSave" = true;
         "nix.formatterPath" = "nixfmt";
         "[nix]"."editor.defaultFormatter" = "jnoortheen.nix-ide";
         "[python]"."editor.defaultFormatter" = "ms-python.black-formatter";
-        
+
         # Mengatur Pyright sebagai Language Server utama
-        "python.languageServer" = "None"; 
+        "python.languageServer" = "None";
         "pyright.disableLanguageServices" = false;
         "python.analysis.typeCheckingMode" = "basic";
-      }; 
+      };
     };
   };
 
