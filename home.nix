@@ -60,12 +60,37 @@ in
     package = pkgs.vscodium; 
     
     extensions = with pkgs.vscode-extensions; [
+      # --- TEMA ---
       catppuccin.catppuccin-vsc
+      
+      # --- NIXOS ---
+      jnoortheen.nix-ide       # Wajib untuk syntax highlight dan formatting file .nix
+
+      # --- PYTHON ---
+      ms-python.python         # Standar wajib untuk linting, debugging, dan auto-complete Python
+      ms-pyright.pyright
+      
+      # --- JAVASCRIPT & WEB ---
+      esbenp.prettier-vscode   # Sangat membantu merapikan kode JS, HTML, dan CSS
+      dbaeumer.vscode-eslint   # Linter untuk mencari error di JavaScript
+
+      # --- ALGORITMA & PRODUKTIVITAS BELAJAR ---
+      usernamehw.errorlens     # Memunculkan pesan error langsung di baris kode (sangat cocok untuk debugging tugas pemrograman)
+      oderwat.indent-rainbow   # Mewarnai indentasi, sangat membantu saat menulis Python agar tidak error karena salah spasi
+      eamodio.gitlens
     ];
 
     userSettings = {
       "workbench.colorTheme" = "Catppuccin Mocha"; 
       "catppuccin.accentColor" = "mauve"; 
+      # Auto-format saat file disave
+      "editor.formatOnSave" = true;
+      "[nix]"."editor.defaultFormatter" = "jnoortheen.nix-ide";
+      "[python]"."editor.defaultFormatter" = "ms-python.python";
+      # Mengatur Pyright sebagai Language Server utama
+      "python.languageServer" = "None"; # Nonaktifkan default jika murni memakai ekstensi pyright terpisah
+      "pyright.disableLanguageServices" = false;
+      "python.analysis.typeCheckingMode" = "basic";
     };
   };
 
