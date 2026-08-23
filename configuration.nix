@@ -105,6 +105,8 @@
     waybar
     hyprpaper
     btop
+    waypaper
+    nwg-displays
     #untuk nvim
     unzip
     nodejs_22
@@ -159,7 +161,7 @@
   };
 
   fonts.packages = with pkgs; [
-   nerd-fonts.iosevka
+    nerd-fonts.iosevka
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

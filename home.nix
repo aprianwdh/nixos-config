@@ -52,9 +52,17 @@ in
       name = "catppuccin-mocha-mauve-cursors";
       package = pkgs.catppuccin-cursors.mochaMauve;
     };
+    extraConfig = {
+      "gtk-application-prefer-dark-theme" = 1;
+    };
   };
+  
+  dconf.settings = {
+    "org/gnome/desktop/interface" = {
+      color-scheme = "prefer-dark";
+    };
 
-  # VSCODIUM DI SINI
+  # VSCODIUM
   programs.vscodium = {
     enable = true;
     
@@ -78,24 +86,24 @@ in
         usernamehw.errorlens
         oderwat.indent-rainbow
         eamodio.gitlens
-      ]; # Tutup ekstensi
+      ];
 
       userSettings = {
         "workbench.colorTheme" = "Catppuccin Mocha"; 
         "catppuccin.accentColor" = "mauve"; 
         
         # Auto-format saat file disave
-        "editor.formatOnSave" = true;
-        "[nix]"."editor.defaultFormatter" = "jnoortheen.nix-ide";
+        "editor.formatOnSave" = false;
+        #"[nix]"."editor.defaultFormatter" = "jnoortheen.nix-ide";
         "[python]"."editor.defaultFormatter" = "ms-python.python";
         
         # Mengatur Pyright sebagai Language Server utama
         "python.languageServer" = "None"; 
         "pyright.disableLanguageServices" = false;
         "python.analysis.typeCheckingMode" = "basic";
-      }; # Tutup userSettings
-    }; # Tutup profiles.default
-  }; # <--- INI YANG KURANG SEBELUMNYA (Tutup programs.vscodium)
+      }; 
+    };
+  };
 
   home.file.".zshrc".source = create_symlink "${dotfiles}/.zshrc";
 }
