@@ -107,6 +107,7 @@
     btop
     waypaper
     nwg-displays
+    nixfmt-rfc-style
     #untuk nvim
     unzip
     nodejs_22

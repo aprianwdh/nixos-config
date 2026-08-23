@@ -52,8 +52,11 @@ in
       name = "catppuccin-mocha-mauve-cursors";
       package = pkgs.catppuccin-cursors.mochaMauve;
     };
-    extraConfig = {
-      "gtk-application-prefer-dark-theme" = 1;
+    gtk3.extraConfig = {
+      gtk-application-prefer-dark-theme = 1;
+    };
+    gtk4.extraConfig = {
+      gtk-application-prefer-dark-theme = 1;
     };
   };
 
@@ -78,6 +81,7 @@ in
         # --- PYTHON ---
         ms-python.python
         ms-pyright.pyright
+        ms-python.black-formatter
         
         # --- JAVASCRIPT & WEB ---
         esbenp.prettier-vscode
@@ -94,9 +98,10 @@ in
         "catppuccin.accentColor" = "mauve"; 
         
         # Auto-format saat file disave
-        "editor.formatOnSave" = false;
-        #"[nix]"."editor.defaultFormatter" = "jnoortheen.nix-ide";
-        "[python]"."editor.defaultFormatter" = "ms-python.python";
+        "editor.formatOnSave" = true;
+        "nix.formatterPath" = "nixfmt";
+        "[nix]"."editor.defaultFormatter" = "jnoortheen.nix-ide";
+        "[python]"."editor.defaultFormatter" = "ms-python.black-formatter";
         
         # Mengatur Pyright sebagai Language Server utama
         "python.languageServer" = "None"; 
