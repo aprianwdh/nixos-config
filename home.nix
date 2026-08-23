@@ -78,20 +78,24 @@ in
         usernamehw.errorlens
         oderwat.indent-rainbow
         eamodio.gitlens
-    ];
-    userSettings = {
-      "workbench.colorTheme" = "Catppuccin Mocha"; 
-      "catppuccin.accentColor" = "mauve"; 
-      # Auto-format saat file disave
-      "editor.formatOnSave" = true;
-      "[nix]"."editor.defaultFormatter" = "jnoortheen.nix-ide";
-      "[python]"."editor.defaultFormatter" = "ms-python.python";
-      # Mengatur Pyright sebagai Language Server utama
-      "python.languageServer" = "None"; # Nonaktifkan default jika murni memakai ekstensi pyright terpisah
-      "pyright.disableLanguageServices" = false;
-      "python.analysis.typeCheckingMode" = "basic";
-    };
-  };
+      ]; # Tutup ekstensi
+
+      userSettings = {
+        "workbench.colorTheme" = "Catppuccin Mocha"; 
+        "catppuccin.accentColor" = "mauve"; 
+        
+        # Auto-format saat file disave
+        "editor.formatOnSave" = true;
+        "[nix]"."editor.defaultFormatter" = "jnoortheen.nix-ide";
+        "[python]"."editor.defaultFormatter" = "ms-python.python";
+        
+        # Mengatur Pyright sebagai Language Server utama
+        "python.languageServer" = "None"; 
+        "pyright.disableLanguageServices" = false;
+        "python.analysis.typeCheckingMode" = "basic";
+      }; # Tutup userSettings
+    }; # Tutup profiles.default
+  }; # <--- INI YANG KURANG SEBELUMNYA (Tutup programs.vscodium)
 
   home.file.".zshrc".source = create_symlink "${dotfiles}/.zshrc";
 }
