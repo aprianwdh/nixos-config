@@ -16,6 +16,10 @@ in
   home.homeDirectory = "/home/enzwich";
   home.stateVersion = "26.05";
 
+  home.sessionVariable = {
+    GTK_THEME = "catppuccin-mocha-mauve-standard"
+  }
+
   xdg.configFile = builtins.mapAttrs (name: subpath: {
     source = create_symlink "${dotfiles}/${subpath}";
     recursive = true;
@@ -33,7 +37,7 @@ in
   gtk = {
     enable = true;
     theme = {
-      name = "Catppuccin-Mocha-Standard-Mauve-Dark";
+      name = "catppuccin-mocha-mauve-standard";
       package = pkgs.catppuccin-gtk.override {
         accents = [ "mauve" ];
         variant = "mocha";
