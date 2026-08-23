@@ -16,10 +16,6 @@ in
   home.homeDirectory = "/home/enzwich";
   home.stateVersion = "26.05";
 
-  home.sessionVariable = {
-    GTK_THEME = "catppuccin-mocha-mauve-standard"
-  }
-
   xdg.configFile = builtins.mapAttrs (name: subpath: {
     source = create_symlink "${dotfiles}/${subpath}";
     recursive = true;
