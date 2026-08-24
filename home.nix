@@ -9,6 +9,7 @@ let
     foot = "foot";
     hypr = "hypr";
     "starship.toml" = "starship.toml";
+    swappy = "swappy";
   };
 in
 {

@@ -131,6 +131,8 @@
     grim
     slurp
     swappy
+    wl-clipboard
+    #audio & visual
     wireplumber
     brightnessctl
   ];
