@@ -10,6 +10,7 @@ let
     hypr = "hypr";
     "starship.toml" = "starship.toml";
     swappy = "swappy";
+    fastfetch = "fastfetch";
   };
 in
 {
