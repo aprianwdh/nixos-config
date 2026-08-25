@@ -7,21 +7,37 @@ Welcome to my personal NixOS dotfiles repository. This repository contains my fu
 
 ## 🌟 Key Features
 
-*   **Window Manager:** [Hyprland](https://hyprland.org/) (Wayland)
-*   **System Management:** Nix Flakes & Home Manager
-*   **Status Bar:** Waybar
-*   **App Launcher:**  Rofi (Wayland)
-*   **Terminal Emulator:** Foot
-*   **Text Editor:** Neovim / VSCode
+- **Window Manager:** [Hyprland](https://hyprland.org/) (Wayland)
+- **System Management:** Nix Flakes & Home Manager
+- **Status Bar:** Waybar
+- **App Launcher:** Rofi (Wayland)
+- **Terminal Emulator:** Foot
+- **Text Editor:** Neovim / VSCode
 
 ## 📂 Directory Structure
 
 The repository is structured to be modular, readable, and easy to maintain:
 
 ```text
-.
-├── flake.nix             # Main entry point of the system configuration
-├── flake.lock            # Lockfile for dependency versioning
-├── configuration.nix     # Core system configuration (Boot, Network, Users, etc.)
-├── hardware-configuration.nix # Auto-generated hardware specifics (Do not copy blindly!)
-├── home.nix              # User-specific configuration via Home Manager
+
+/etc/nixos/
+├── flake.nix
+├── hosts/
+│   └── nixos-btw/
+│       ├── configuration.nix
+│       └── hardware-configuration.nix   # tempel milikmu yang lama di sini
+├── modules/
+│   ├── desktop.nix        # graphics, hyprland, xkb, thunar, firefox, nix-ld
+│   ├── audio.nix           # pipewire
+│   ├── locale.nix          # timezone & i18n
+│   ├── nix-settings.nix    # nix.settings & nix.gc
+│   └── packages.nix        # environment.systemPackages
+└── users/
+    └── enzwich/
+        ├── home.nix         # entry point, tinggal import file lain
+        ├── dotfiles.nix     # symlink dotfiles + cliphist
+        ├── theme.nix        # gtk/cursor/dconf catppuccin
+        └── programs/
+            ├── shell.nix
+            └── vscodium.nix
+```
