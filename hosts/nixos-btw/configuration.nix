@@ -25,7 +25,7 @@
 
   services.displayManager.ly.enable = true;
 
-  # Definisi user. Jangan lupa set password dengan `passwd`.
+  # Definisi user
   users.users."enzwich" = {
     isNormalUser = true;
     shell = pkgs.zsh;
@@ -46,7 +46,5 @@
   ];
 
   # Nilai ini menentukan rilis NixOS untuk kompatibilitas data stateful
-  # (lokasi file, versi database, dst). Aman dibiarkan pada versi rilis
-  # instalasi pertama sistem ini — jangan diubah tanpa baca dokumentasinya.
   system.stateVersion = "26.05";
 }

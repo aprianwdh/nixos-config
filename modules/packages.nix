@@ -47,5 +47,8 @@
     # audio & visual
     wireplumber
     brightnessctl
+
+    #gaming
+    pcsx2
   ];
 }
