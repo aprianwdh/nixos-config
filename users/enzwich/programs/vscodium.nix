@@ -28,6 +28,7 @@
       ];
 
       userSettings = {
+        "telemetry.telemetryLevel" = "off";
         "workbench.colorTheme" = "Catppuccin Mocha";
         "catppuccin.accentColor" = "mauve";
 
