@@ -26,6 +26,9 @@
     btop
     waypaper
     nwg-displays
+    file-roller
+    zip
+    unzip
 
     # untuk nvim
     unzip

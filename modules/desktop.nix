@@ -30,7 +30,14 @@
   };
 
   # file manager & dconf
-  programs.thunar.enable = true;
+  programs.thunar = {
+    enable = true;
+    plugins = with pkgs; [
+      thunar-archive-plugin
+      thunar-volman
+    ];
+  };
+  services.gvfs.enable = true;
   programs.xfconf.enable = true;
   programs.dconf.enable = true;
 
