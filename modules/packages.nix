@@ -10,7 +10,7 @@
     gcc
     lua-language-server
     nil
-    nixfmt-rfc-style
+    nixfmt
     wget
     nitch
     rofi
