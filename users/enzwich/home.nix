@@ -6,6 +6,7 @@
     ./theme.nix
     ./programs/shell.nix
     ./programs/vscodium.nix
+    ./programs/cliphist.nix
   ];
 
   home.username = "enzwich";
