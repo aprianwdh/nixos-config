@@ -21,7 +21,7 @@ in
   }) configs;
 
   xdg.dataFile."applications" = {
-    source = create_symlink "${dotfiles}/applications";
+    source = create_symlink "${config.home.homeDirectory}/nixos-dotfiles/applications";
     recursive = true;
   };
 
