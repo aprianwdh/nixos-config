@@ -20,5 +20,10 @@ in
     recursive = true;
   }) configs;
 
+  xdg.dataFile."applications" = {
+    source = create_symlink "${dotfiles}/applications";
+    recursive = true;
+  };
+
   home.file.".zshrc".source = create_symlink "${dotfiles}/.zshrc";
 }
