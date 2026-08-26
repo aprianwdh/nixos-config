@@ -41,7 +41,7 @@
   programs.xfconf.enable = true;
   programs.dconf.enable = true;
   environment.etc."xdg/xfce4/helpers.rc".text = ''
-    TerminalEmulator=kitty
+    TerminalEmulator=foot
   '';
 
   programs.firefox.enable = true;
