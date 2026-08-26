@@ -12,6 +12,7 @@ let
     "starship.toml" = "starship.toml";
     swappy = "swappy";
     fastfetch = "fastfetch";
+    xfce4 = "xfce4"
   };
 in
 {
