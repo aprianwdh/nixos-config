@@ -40,6 +40,9 @@
   services.gvfs.enable = true;
   programs.xfconf.enable = true;
   programs.dconf.enable = true;
+  environment.etc."xdg/xfce4/helpers.rc".text = ''
+    TerminalEmulator=kitty
+  '';
 
   programs.firefox.enable = true;
   programs.starship.enable = true;
