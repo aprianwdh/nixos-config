@@ -29,6 +29,7 @@
     file-roller
     zip
     unzip
+    bc
 
     # untuk nvim
     unzip
