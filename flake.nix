@@ -4,7 +4,9 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     hyprland.url = "github:hyprwm/Hyprland/v0.56.0";
-    chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
+
+    # nix-cachyos-kernel
+    nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel/release";
 
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -18,7 +20,7 @@
       nixpkgs,
       hyprland,
       home-manager,
-      chaotic,
+      nix-cachyos-kernel,
       ...
     }:
     {
@@ -29,8 +31,11 @@
           ./hosts/nixos-btw/hardware-configuration.nix
 
           home-manager.nixosModules.home-manager
-          chaotic.nixosModules.default
           {
+            # "pinned" = pakai revisi nixpkgs persis seperti yang dipakai nix-cachyos-kernel,
+            # ini yang menjamin kamu dapat binary cache (tidak compile dari source).
+            nixpkgs.overlays = [ nix-cachyos-kernel.overlays.pinned ];
+
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.backupFileExtension = "backup";
