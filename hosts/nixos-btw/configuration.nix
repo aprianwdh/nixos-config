@@ -25,7 +25,7 @@
 
   services.displayManager.ly.enable = true;
 
-  zramSwap.enable = true
+  zramSwap.enable = true;
 
   # Definisi user
   users.users."enzwich" = {
