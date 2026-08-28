@@ -25,6 +25,8 @@
 
   services.displayManager.ly.enable = true;
 
+  zramSwap.enable = true
+
   # Definisi user
   users.users."enzwich" = {
     isNormalUser = true;
@@ -39,6 +41,7 @@
   };
 
   programs.zsh.enable = true;
+  programs.gamemode.enable = true;
   nixpkgs.config.allowUnfree = true;
 
   fonts.packages = with pkgs; [
