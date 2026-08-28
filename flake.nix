@@ -18,6 +18,7 @@
       nixpkgs,
       hyprland,
       home-manager,
+      chaotic,
       ...
     }:
     {
