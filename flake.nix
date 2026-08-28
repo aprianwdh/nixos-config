@@ -34,7 +34,7 @@
           {
             # "pinned" = pakai revisi nixpkgs persis seperti yang dipakai nix-cachyos-kernel,
             # ini yang menjamin kamu dapat binary cache (tidak compile dari source).
-            nixpkgs.overlays = [ nix-cachyos-kernel.overlays.pinned ];
+            nixpkgs.overlays = [ nix-cachyos-kernel.overlays ];
 
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
