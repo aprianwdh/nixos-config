@@ -4,6 +4,7 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     hyprland.url = "github:hyprwm/Hyprland/v0.56.0";
+    nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel/release";
 
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -17,6 +18,7 @@
       nixpkgs,
       hyprland,
       home-manager,
+      nix-cachyos-kernel,
       ...
     }:
     {
@@ -28,7 +30,7 @@
 
           home-manager.nixosModules.home-manager
           {
-
+            nixpkgs.overlays = [ nix-cachyos-kernel.overlays.pinned ];
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.backupFileExtension = "backup";
