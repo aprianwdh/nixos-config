@@ -13,7 +13,7 @@
     ../../modules/packages.nix
     ../../modules/locale.nix
     ../../modules/nix-settings.nix
-    ../../modules/security.nix
+    #../../modules/security.nix
   ];
 
   # Boot
