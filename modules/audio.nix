@@ -7,7 +7,7 @@
     enable = true;
     alsa.enable = true;
     alsa.support32Bit = true;
-    pulse.enable = true; # Ini membuat aplikasi lama mengira masih pakai PulseAudio
+    pulse.enable = true;
   };
   services.pulseaudio.enable = false;
 }

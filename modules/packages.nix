@@ -30,6 +30,7 @@
     zip
     unzip
     bc
+    wlogout
 
     # untuk nvim
     unzip
@@ -51,6 +52,7 @@
     # audio & visual
     wireplumber
     brightnessctl
+    playerctl
 
     #gaming
     pcsx2

@@ -13,7 +13,6 @@
     ../../modules/packages.nix
     ../../modules/locale.nix
     ../../modules/nix-settings.nix
-    #../../modules/security.nix
   ];
 
   # Boot
@@ -50,6 +49,5 @@
     nerd-fonts.iosevka
   ];
 
-  # Nilai ini menentukan rilis NixOS untuk kompatibilitas data stateful
   system.stateVersion = "26.05";
 }
