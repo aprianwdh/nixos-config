@@ -13,6 +13,7 @@ let
     swappy = "swappy";
     fastfetch = "fastfetch";
     xfce4 = "xfce4";
+    wlogout = "wlogout";
   };
 in
 {

@@ -2,7 +2,7 @@
 
 {
   environment.systemPackages = with pkgs; [
-    neovim # Jangan lupa siapkan editor untuk edit configuration.nix! Nano juga terpasang default.
+    neovim
     tree
     git
     gh
