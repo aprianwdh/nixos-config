@@ -30,6 +30,9 @@
     unzip
     bc
     wlogout
+    mpvpaper
+    mpv
+    socat
 
     # untuk nvim
     unzip
