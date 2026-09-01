@@ -32,7 +32,7 @@
 
       userSettings = {
         # fonts
-        "editor.fontFamily" = "'Cozette', 'Symbols Nerd Font', monospace";
+        "editor.fontFamily" = "'Monocraft', 'Symbols Nerd Font', monospace";
         "editor.fontSize" = 13;
         "editor.fontLigatures" = false;
 

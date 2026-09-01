@@ -62,15 +62,15 @@
 
     fontconfig.defaultFonts = {
       monospace = [
-        "Cozette"
+        "Monocraft"
         "Symbols Nerd Font"
       ];
       sansSerif = [
-        "Cozette"
+        "Monocraft"
         "Symbols Nerd Font"
       ];
       serif = [
-        "Cozette"
+        "Monocraft"
         "Symbols Nerd Font"
       ];
     };
