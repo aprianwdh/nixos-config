@@ -21,6 +21,8 @@
         esbenp.prettier-vscode
         dbaeumer.vscode-eslint
 
+        # --- LUA ---
+        sumneko.lua
         # --- ALGORITMA & PRODUKTIVITAS BELAJAR ---
         usernamehw.errorlens
         oderwat.indent-rainbow
@@ -42,6 +44,11 @@
         "python.languageServer" = "None";
         "pyright.disableLanguageServices" = false;
         "python.analysis.typeCheckingMode" = "basic";
+
+        "Lua.workspace.library" = [
+          "/run/current-system/sw/share/hypr/stubs"
+        ];
+        "Lua.diagnostics.globals" = [ "hl" ];
       };
     };
   };
