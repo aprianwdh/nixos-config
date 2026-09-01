@@ -25,7 +25,6 @@
     hyprpaper
     btop
     waypaper
-    nwg-displays
     file-roller
     zip
     unzip

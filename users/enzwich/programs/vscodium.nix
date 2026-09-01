@@ -8,6 +8,7 @@
       extensions = with pkgs.vscode-extensions; [
         # --- TEMA ---
         catppuccin.catppuccin-vsc
+        catppuccin.catppuccin-vsc-icons
 
         # --- NIXOS ---
         jnoortheen.nix-ide
@@ -32,6 +33,7 @@
       userSettings = {
         "telemetry.telemetryLevel" = "off";
         "workbench.colorTheme" = "Catppuccin Mocha";
+        "workbench.iconTheme" = "catppuccin-mocha"
         "catppuccin.accentColor" = "mauve";
 
         # Auto-format saat file disave
