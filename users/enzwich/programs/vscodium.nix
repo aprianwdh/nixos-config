@@ -33,7 +33,7 @@
       userSettings = {
         "telemetry.telemetryLevel" = "off";
         "workbench.colorTheme" = "Catppuccin Mocha";
-        "workbench.iconTheme" = "catppuccin-mocha"
+        "workbench.iconTheme" = "catppuccin-mocha";
         "catppuccin.accentColor" = "mauve";
 
         # Auto-format saat file disave
