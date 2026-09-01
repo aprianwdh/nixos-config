@@ -22,7 +22,6 @@
     vscodium
     pavucontrol
     waybar
-    hyprpaper
     btop
     waypaper
     file-roller

@@ -56,7 +56,7 @@
 
   fonts = {
     packages = with pkgs; [
-      cozette
+      monocraft
       nerd-fonts.symbols-only # Ikon khusus logo
     ];
 
