@@ -12,6 +12,10 @@
 
   gtk = {
     enable = true;
+    font = {
+      name = "Cozette";
+      size = 13; # Cozette biasanya optimal di ukuran 10 atau 13
+    };
     theme = {
       name = "catppuccin-mocha-mauve-standard";
       package = pkgs.catppuccin-gtk.override {

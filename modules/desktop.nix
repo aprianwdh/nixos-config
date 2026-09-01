@@ -53,4 +53,26 @@
     stdenv.cc.cc.lib
     zlib
   ];
+
+  fonts = {
+    packages = with pkgs; [
+      cozette
+      nerd-fonts.symbols-only # Ikon khusus logo
+    ];
+
+    fontconfig.defaultFonts = {
+      monospace = [
+        "Cozette"
+        "Symbols Nerd Font"
+      ];
+      sansSerif = [
+        "Cozette"
+        "Symbols Nerd Font"
+      ];
+      serif = [
+        "Cozette"
+        "Symbols Nerd Font"
+      ];
+    };
+  };
 }

@@ -31,7 +31,15 @@
       ];
 
       userSettings = {
+        # fonts
+        "editor.fontFamily" = "'Cozette', 'Symbols Nerd Font', monospace";
+        "editor.fontSize" = 13;
+        "editor.fontLigatures" = false;
+
+        # telematery (palacakan)
         "telemetry.telemetryLevel" = "off";
+
+        # theme
         "workbench.colorTheme" = "Catppuccin Mocha";
         "workbench.iconTheme" = "catppuccin-mocha";
         "catppuccin.accentColor" = "mauve";
@@ -47,6 +55,7 @@
         "pyright.disableLanguageServices" = false;
         "python.analysis.typeCheckingMode" = "basic";
 
+        # lua hyprland settings
         "Lua.workspace.library" = [
           "/run/current-system/sw/share/hypr/stubs"
         ];

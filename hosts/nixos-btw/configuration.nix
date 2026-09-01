@@ -45,9 +45,5 @@
   programs.gamemode.enable = true;
   nixpkgs.config.allowUnfree = true;
 
-  fonts.packages = with pkgs; [
-    nerd-fonts.iosevka
-  ];
-
   system.stateVersion = "26.05";
 }
