@@ -5,8 +5,8 @@
     enable = true;
     gtk.enable = true;
     x11.enable = true;
-    name = "catppuccin-mocha-mauve-cursors";
-    package = pkgs.catppuccin-cursors.mochaMauve;
+    name = "Bibata-Modern-Classic";
+    package = pkgs.bibata-cursors;
     size = 24;
   };
 
@@ -16,23 +16,13 @@
       name = "Monocraft";
       size = 13;
     };
-    theme = {
-      name = "catppuccin-mocha-mauve-standard";
-      package = pkgs.catppuccin-gtk.override {
-        accents = [ "mauve" ];
-        variant = "mocha";
-      };
-    };
     iconTheme = {
       name = "Papirus-Dark";
-      package = pkgs.catppuccin-papirus-folders.override {
-        flavor = "mocha";
-        accent = "mauve";
-      };
+      package = pkgs.papirus-icon-theme;
     };
     cursorTheme = {
-      name = "catppuccin-mocha-mauve-cursors";
-      package = pkgs.catppuccin-cursors.mochaMauve;
+      name = "Bibata-Modern-Classic";
+      package = pkgs.bibata-cursors;
     };
     gtk3.extraConfig = {
       gtk-application-prefer-dark-theme = 1;
