@@ -19,7 +19,7 @@
       hyprland,
       home-manager,
       nix-cachyos-kernel,
-      catppuccin
+      catppuccin,
       ...
     }:
     {
