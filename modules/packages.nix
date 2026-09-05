@@ -32,6 +32,7 @@
     mpvpaper
     mpv
     socat
+    localsend
 
     # untuk nvim
     unzip

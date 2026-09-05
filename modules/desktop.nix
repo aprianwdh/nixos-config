@@ -29,6 +29,9 @@
     withUWSM = true;
   };
 
+  # Niri
+  programs.niri.enable = true;
+
   # file manager & dconf
   programs.thunar = {
     enable = true;
