@@ -14,7 +14,6 @@
     flavor = "mocha";
     accent = "lavender";
     autoEnable = true;
-    gtk.icon.enable = true;
   };
   gtk = {
     enable = true;
