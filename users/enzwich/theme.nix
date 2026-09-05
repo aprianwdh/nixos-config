@@ -14,10 +14,17 @@
     flavor = "mocha";
     accent = "lavender";
     autoEnable = true;
-    gtk.enable = true;
+    gtk.icon.enable = true;
   };
   gtk = {
     enable = true;
+    theme = {
+      name = "catppuccin-mocha-lavender-standard";
+      package = pkgs.catppuccin-gtk.override {
+      accents = [ "lavender" ];
+      size = "standard";
+      variant = "mocha";
+    };
     font = {
       name = "Monocraft";
       size = 13;
