@@ -20,9 +20,10 @@
     theme = {
       name = "catppuccin-mocha-lavender-standard";
       package = pkgs.catppuccin-gtk.override {
-      accents = [ "lavender" ];
-      size = "standard";
-      variant = "mocha";
+        accents = [ "lavender" ];
+        size = "standard";
+        variant = "mocha";
+      };
     };
     font = {
       name = "Monocraft";
