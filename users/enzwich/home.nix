@@ -1,7 +1,13 @@
-{ config, pkgs, ... }:
+{
+  config,
+  pkgs,
+  inputs,
+  ...
+}:
 
 {
   imports = [
+    inputs.catppuccin.homeModules.catppuccin
     ./dotfiles.nix
     ./theme.nix
     ./programs/shell.nix

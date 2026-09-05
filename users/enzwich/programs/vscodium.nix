@@ -42,7 +42,7 @@
         # theme
         "workbench.colorTheme" = "Catppuccin Mocha";
         "workbench.iconTheme" = "catppuccin-mocha";
-        "catppuccin.accentColor" = "mauve";
+        "catppuccin.accentColor" = "lavender";
 
         # Auto-format saat file disave
         "editor.formatOnSave" = true;
