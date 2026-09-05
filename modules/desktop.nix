@@ -28,9 +28,6 @@
       inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
     withUWSM = true;
   };
-  environment.systemPackages = [
-    inputs.scroll-overview.packages.${pkgs.stdenv.hostPlatform.system}.default
-  ];
 
   # file manager & dconf
   programs.thunar = {

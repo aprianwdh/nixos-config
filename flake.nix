@@ -5,10 +5,6 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     hyprland.url = "github:hyprwm/Hyprland/v0.56.0";
     nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel/release";
-    scroll-overview = {
-      url = "github:yayuuu/hyprland-scroll-overview";
-      inputs.hyprland.follows = "hyprland";
-    };
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -22,7 +18,6 @@
       hyprland,
       home-manager,
       nix-cachyos-kernel,
-      scroll-overview,
       ...
     }:
     {
