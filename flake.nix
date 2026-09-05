@@ -8,7 +8,7 @@
     scroll-overview = {
       url = "github:yayuuu/hyprland-scroll-overview";
       inputs.hyprland.follows = "hyprland";
-    }
+    };
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
