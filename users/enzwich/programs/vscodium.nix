@@ -6,10 +6,6 @@
 
     profiles.default = {
       extensions = with pkgs.vscode-extensions; [
-        # --- TEMA ---
-        catppuccin.catppuccin-vsc
-        catppuccin.catppuccin-vsc-icons
-
         # --- NIXOS ---
         jnoortheen.nix-ide
 
@@ -38,11 +34,6 @@
 
         # telematery (palacakan)
         "telemetry.telemetryLevel" = "off";
-
-        # theme
-        "workbench.colorTheme" = "Catppuccin Mocha";
-        "workbench.iconTheme" = "catppuccin-mocha";
-        "catppuccin.accentColor" = "lavender";
 
         # Auto-format saat file disave
         "editor.formatOnSave" = true;
