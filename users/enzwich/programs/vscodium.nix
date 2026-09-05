@@ -28,8 +28,6 @@
         usernamehw.errorlens
         oderwat.indent-rainbow
         eamodio.gitlens
-        # -----kdl-------
-        kdl-org.kdl
       ];
 
       userSettings = {
