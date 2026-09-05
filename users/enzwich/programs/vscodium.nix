@@ -28,6 +28,8 @@
         usernamehw.errorlens
         oderwat.indent-rainbow
         eamodio.gitlens
+        # -----kdl-------
+        kdl-org.kdl
       ];
 
       userSettings = {
@@ -54,12 +56,6 @@
         "python.languageServer" = "None";
         "pyright.disableLanguageServices" = false;
         "python.analysis.typeCheckingMode" = "basic";
-
-        # lua hyprland settings
-        "Lua.workspace.library" = [
-          "/run/current-system/sw/share/hypr/stubs"
-        ];
-        "Lua.diagnostics.globals" = [ "hl" ];
       };
     };
   };
