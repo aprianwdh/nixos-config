@@ -8,7 +8,7 @@ let
     waybar = "waybar";
     rofi = "rofi";
     foot = "foot";
-    hypr = "hypr";
+    niri = "niri";
     "starship.toml" = "starship.toml";
     swappy = "swappy";
     fastfetch = "fastfetch";

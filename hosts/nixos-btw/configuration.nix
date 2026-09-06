@@ -34,7 +34,6 @@ in
     settings = {
       default_session = {
         user = "greeter";
-        # command = "${lib.getExe pkgs.tuigreet} --time --asterisks --remember --remember-session --sessions ${sessionsDir}/wayland-sessions";
         command = "${lib.getExe pkgs.tuigreet} --time --asterisks --remember --remember-session --cmd 'uwsm start niri-uwsm.desktop'";
 
       };
@@ -60,6 +59,10 @@ in
     ];
     packages = with pkgs; [ ];
   };
+
+  # allow firewall for local send
+  networking.firewall.allowedTCPPorts = [ 53317 ];
+  networking.firewall.allowedUDPPorts = [ 53317 ];
 
   programs.zsh.enable = true;
   programs.gamemode.enable = true;
