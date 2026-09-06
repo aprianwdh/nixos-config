@@ -23,7 +23,7 @@
   programs.niri = {
     enable = true;
     withUWSM = true;
-  }
+  };
 
   # file manager & dconf
   programs.thunar = {
