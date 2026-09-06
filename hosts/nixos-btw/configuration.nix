@@ -6,6 +6,11 @@
   ...
 }:
 
+let
+  # Get the path to generated Wayland session desktop entries
+  sessionsDir = "${config.services.displayManager.sessionData.desktops}/share";
+in
+
 {
   imports = [
     ../../modules/desktop.nix
