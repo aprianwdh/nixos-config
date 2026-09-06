@@ -35,7 +35,7 @@ in
       default_session = {
         user = "greeter";
         command = ''
-          ${lib.getExe pkgs.greetd.tuigreet} \
+          ${lib.getExe pkgs.tuigreet} \
             --time \
             --asterisks \
             --user-menu \
