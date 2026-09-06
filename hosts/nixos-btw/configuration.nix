@@ -35,7 +35,7 @@ in
       default_session = {
         user = "greeter";
         # command = "${lib.getExe pkgs.tuigreet} --time --asterisks --remember --remember-session --sessions ${sessionsDir}/wayland-sessions";
-        command = "${lib.getExe pkgs.tuigreet} --time --asterisks --remember --remember-session --cmd niri-uwsm.desktop";
+        command = "${lib.getExe pkgs.tuigreet} --time --asterisks --remember --remember-session --cmd 'uwsm start niri-uwsm.desktop'";
 
       };
     };
