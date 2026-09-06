@@ -11,14 +11,8 @@
       "root"
       "enzwich"
     ];
-    extra-substituters = [
-      "https://attic.xuyh0120.win/lantian"
-      "https://cache.xinux.uz"
-    ];
-    extra-trusted-public-keys = [
-      "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="
-      "lantian:EeAUQ+W+6r7EtwnmYjeVwx5kOGEBpjlBfPlzGlTNvHc="
-    ];
+    extra-substituters = [ ];
+    extra-trusted-public-keys = [ ];
     auto-optimise-store = true;
   };
 
