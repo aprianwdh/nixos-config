@@ -24,7 +24,26 @@
   networking.hostName = "nixos-btw";
   networking.networkmanager.enable = true;
 
-  services.displayManager.ly.enable = true;
+  services.greetd = {
+    enable = true;
+    settings = {
+      default_session = {
+        user = "greeter";
+        command = ''
+          ${lib.getExe pkgs.greetd.tuigreet} \
+            --time \
+            --asterisks \
+            --user-menu \
+            --sessions ${sessionsDir}/wayland-sessions
+        '';
+      };
+    };
+  };
+
+  users.users.greeter = {
+    isNormalUser = false;
+    extraGroups = [ "seat" ];
+  };
 
   zramSwap.enable = true;
 
