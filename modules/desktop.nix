@@ -20,11 +20,15 @@
   };
 
   # Niri
-  programs.niri = {
+  programs.niri.enable = true;
+  programs.uwsm = {
     enable = true;
-    withUWSM = true;
+    waylandCompositors.niri = {
+      prettyName = "Niri";
+      comment = "Niri compositors managed by UWSM";
+      binPath = "/run/current-system/sw/bin/niri";
+    };
   };
-
   # file manager & dconf
   programs.thunar = {
     enable = true;
