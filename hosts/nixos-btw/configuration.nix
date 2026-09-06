@@ -34,13 +34,9 @@ in
     settings = {
       default_session = {
         user = "greeter";
-        command = ''
-          ${lib.getExe pkgs.tuigreet} \
-            --time \
-            --asterisks \
-            --user-menu \
-            --sessions ${sessionsDir}/wayland-sessions
-        '';
+        command = "
+          ${lib.getExe pkgs.tuigreet} --time --asterisks --user-menu --sessions ${sessionsDir}/wayland-sessions
+        ";
       };
     };
   };
