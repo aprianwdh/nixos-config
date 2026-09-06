@@ -26,7 +26,8 @@
     waylandCompositors.niri = {
       prettyName = "Niri";
       comment = "Niri compositors managed by UWSM";
-      binPath = "/run/current-system/sw/bin/niri --session";
+      binPath = "/run/current-system/sw/bin/niri";
+      extraArgs = [ "--session" ]
     };
   };
   # file manager & dconf
