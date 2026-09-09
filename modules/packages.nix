@@ -58,6 +58,7 @@
 
     #gaming
     pcsx2
+    xwayland-satellite
   ];
   programs.steam.enable = true;
 }
