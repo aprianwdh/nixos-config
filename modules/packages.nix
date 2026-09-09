@@ -59,6 +59,7 @@
     #gaming
     pcsx2
     xwayland-satellite
+    protonplus
   ];
   programs.steam.enable = true;
 }
