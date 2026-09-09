@@ -59,4 +59,5 @@
     #gaming
     pcsx2
   ];
+  programs.steam.enable = true;
 }
