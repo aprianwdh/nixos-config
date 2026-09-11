@@ -33,7 +33,7 @@
     mpv
     socat
     localsend
-    yewtube
+    yt-dlp
 
     # untuk nvim
     unzip
