@@ -18,6 +18,7 @@ in
     ../../modules/packages.nix
     ../../modules/locale.nix
     ../../modules/nix-settings.nix
+    ../../modules/virtualisation.nix
   ];
 
   # Boot
