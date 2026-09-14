@@ -27,6 +27,7 @@
     file-roller
     zip
     unzip
+    p7zip
     bc
     wlogout
     mpvpaper
