@@ -35,6 +35,7 @@
     socat
     localsend
     yt-dlp
+    godot
 
     # untuk nvim
     unzip
