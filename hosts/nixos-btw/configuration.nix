@@ -66,7 +66,14 @@ in
   networking.firewall.allowedTCPPorts = [ 53317 ];
   networking.firewall.allowedUDPPorts = [ 53317 ];
 
-  programs.zsh.enable = true;
+  programs.zsh = {
+    enable = true;
+
+    enableCompletion = true;
+    autosuggestion.enable = true;
+    syntaxHighlighting.enable = true;
+  };
+
   programs.gamemode.enable = true;
   nixpkgs.config.allowUnfree = true;
 
