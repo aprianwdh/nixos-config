@@ -36,6 +36,7 @@
     localsend
     yt-dlp
     godot
+    opencode
 
     # untuk nvim
     unzip
