@@ -49,7 +49,7 @@
   programs.starship.enable = true;
 
   #flatpak
-  services.flatpak.enable = true
+  services.flatpak.enable = true;
 
   # mengizinkan menjalankan binary non-nix (mis. untuk Mason di neovim)
   programs.nix-ld.enable = true;
