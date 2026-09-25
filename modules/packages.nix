@@ -36,7 +36,6 @@
     localsend
     yt-dlp
     godot
-    firejail
 
     # untuk nvim
     unzip
@@ -64,7 +63,5 @@
     pcsx2
     xwayland-satellite
     protonplus
-    lutris
   ];
-  programs.steam.enable = true;
 }
