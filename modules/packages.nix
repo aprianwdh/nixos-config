@@ -63,6 +63,7 @@
     pcsx2
     xwayland-satellite
     protonplus
+    lutris
   ];
   programs.steam.enable = true;
 }
