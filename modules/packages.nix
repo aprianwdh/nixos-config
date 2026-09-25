@@ -36,6 +36,7 @@
     localsend
     yt-dlp
     godot
+    firejail
 
     # untuk nvim
     unzip
