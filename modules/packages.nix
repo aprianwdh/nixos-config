@@ -34,6 +34,7 @@
     localsend
     yt-dlp
     godot
+    xwayland-sattelite
 
     # untuk nvim
     unzip
