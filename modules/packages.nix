@@ -8,13 +8,11 @@
     gh
     foot
     gcc
-    lua-language-server
     nil
     nixfmt
     wget
     nitch
     rofi
-    adwaita-icon-theme
     fastfetch
     gnumake
     ripgrep
@@ -61,7 +59,5 @@
 
     #gaming
     pcsx2
-    xwayland-satellite
-    protonplus
   ];
 }
