@@ -21,7 +21,6 @@
 
   # Niri
   programs.niri.enable = true;
-  xwayland.enable = true;
   programs.uwsm = {
     enable = true;
     waylandCompositors.niri = {
