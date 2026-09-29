@@ -25,6 +25,7 @@ in
   boot.kernelPackages = pkgs.linuxPackages_latest;
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader.timeout = null;
 
   # Hostname & networking
   networking.hostName = "nixos-btw";
