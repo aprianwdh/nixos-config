@@ -18,12 +18,14 @@
         esbenp.prettier-vscode
         dbaeumer.vscode-eslint
 
-        # --- LUA ---
-        sumneko.lua
         # --- ALGORITMA & PRODUKTIVITAS BELAJAR ---
         usernamehw.errorlens
         oderwat.indent-rainbow
         eamodio.gitlens
+
+
+        # --- ALGORITMA & PRODUKTIVITAS BELAJAR ---
+        geequlim.godot-tools
       ];
 
       userSettings = {
@@ -45,6 +47,8 @@
         "python.languageServer" = "None";
         "pyright.disableLanguageServices" = false;
         "python.analysis.typeCheckingMode" = "basic";
+
+        "godotTools.lsp.serverPort" = 6005;
       };
     };
   };
