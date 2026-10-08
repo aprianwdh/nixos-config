@@ -6,9 +6,15 @@
 }:
 
 {
-  #virtualisation.virtualbox.host.enable = true;
-  #users.extraGroups.vboxusers.members = ["nixos-btw"];
+  # #virtualisation.virtualbox.host.enable = true;
+  # #users.extraGroups.vboxusers.members = ["nixos-btw"];
 
-  virtualisation.libvirtd.enable = true;
+  virtualisation.libvirtd = {
+    enable = true;
+    qemu = {
+      vhostUserPackages = [ pkgs.virtiofsd ];
+    };
+  };
+
   programs.virt-manager.enable = true;
 }
