@@ -35,6 +35,7 @@
     yt-dlp
     godot
     xwayland-satellite
+    libreoffice-satable
 
     # untuk nvim
     unzip
