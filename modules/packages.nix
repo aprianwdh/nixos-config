@@ -35,7 +35,6 @@
     yt-dlp
     godot
     xwayland-satellite
-    libreoffice
 
     # untuk nvim
     unzip
@@ -62,4 +61,5 @@
     #gaming
     pcsx2
   ];
+  programs.steam.enable = true
 }
