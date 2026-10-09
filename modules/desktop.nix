@@ -39,6 +39,8 @@
     ];
   };
   services.gvfs.enable = true;
+  services.udisks2.enable = true;
+  security.polkit.enable = true;
   programs.xfconf.enable = true;
   programs.dconf.enable = true;
   environment.etc."xdg/xfce4/helpers.rc".text = ''
