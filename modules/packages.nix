@@ -35,6 +35,7 @@
     yt-dlp
     godot
     xwayland-satellite
+    nwg-displays
 
     # untuk nvim
     unzip
